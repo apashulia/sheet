@@ -17,11 +17,11 @@ const CustomToolPanel = ({ api, header = "CustomToolPanel" }) => {
 
   return (
     <div className="tool-panel">
-      <div className="header-wrapper">
+      <div className="header-wrapper" data-test="tool panel icon">
         <i className="icon">
           <Icon />
         </i>
-        <h3 className="header">{header}</h3>
+        <h3 data-test="tool panel header" className="header">{header}</h3>
       </div>
       <ul>
         {!!customToolData &&

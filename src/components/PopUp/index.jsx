@@ -7,7 +7,7 @@ const Popup = ({ headerPopup, children, closePopup }) => {
       <div className="popup-body">
         <h3>{headerPopup}</h3>
         <div>{children}</div>
-        <button className="btn" onClick={closePopup}>
+        <button data-test="popup btn" className="btn" onClick={closePopup}>
           Close X
         </button>
       </div>

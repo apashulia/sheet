@@ -4,7 +4,10 @@ import "./groupPanel.css";
 const GroupPanel = ({ options, onApply, onReset, onSelectChange }) => {
   return (
     <div className="grouping">
-      <select onChange={onSelectChange} className="select">
+      <select
+        data-test="grouping select"
+        onChange={onSelectChange}
+        className="select">
         <option value="" defaultValue hidden>
           Choose column
         </option>
@@ -16,8 +19,8 @@ const GroupPanel = ({ options, onApply, onReset, onSelectChange }) => {
           );
         })}
       </select>
-      <button onClick={onReset}>reset</button>
-      <button onClick={onApply}>apply </button>
+      <button data-test="reset-btn" onClick={onReset}>reset</button>
+      <button data-test="apply-btn" onClick={onApply}>apply </button>
     </div>
   );
 };
